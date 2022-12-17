@@ -18,16 +18,5 @@ jobs:
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
         with:
           registry-url: "https://registry.npmjs.org"
-      - name: install dependencies
-        run: npm ci
-      - name: install gravity CI
-        run: npm i -g @gravityci/cli
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Build project
-        run: npm run build
-      - name: Run Gravity
-        run: gravityci "dist/**/*"
-        env:
-          GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
-          HOST: ${{ secrets.HOST }}
+      - name: dbg
+        run: cat $(echo $GITHUB_EVENT_PATH)
