@@ -1,4 +1,3 @@
-import lodash from "lodash";
+import _ from "lodash";
 
-console.log(lodashmerge({ a: 1 }, { b: 2 }));
-
+console.log(_.merge({ a: 1 }, { b: 2 }));
