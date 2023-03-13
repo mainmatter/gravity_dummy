@@ -1,3 +1,3 @@
 export const utils = () => {
-    consol.elog("utils");
+    console.log("utils");
 }
