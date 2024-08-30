@@ -24,6 +24,6 @@ jobs:
       - name: Build project
         run: npm run build
       - name: Run Gravity
-        run: npm run gravityci "dist/**/*"
+        run: gravityci "dist/**/*"
         env:
           GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
